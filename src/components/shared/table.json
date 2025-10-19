@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_tables",
+  "info": {
+    "displayName": "Table",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "rows": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.table-row"
+    },
+    "headers": {
+      "type": "text"
+    },
+    "disclaimer": {
+      "type": "text"
+    }
+  }
+}

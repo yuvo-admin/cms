@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banners": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    },
+    "categoriesTag": {
+      "type": "component",
+      "component": "blog.categories-tags",
+      "repeatable": false
+    },
+    "categories": {
+      "type": "component",
+      "component": "blog.category",
+      "repeatable": true
+    }
+  }
+}

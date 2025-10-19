@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_ui_faqs",
+  "info": {
+    "displayName": "Faq",
+    "icon": "paint",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_ui_tools",
+  "info": {
+    "displayName": "Tools",
+    "icon": "paint",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.button"
+    },
+    "feature": {
+      "type": "boolean"
+    },
+    "soon": {
+      "type": "boolean"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "bgColor": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.icon"
+    }
+  }
+}

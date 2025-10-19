@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_calculator_calculators",
+  "info": {
+    "displayName": "Calculators"
+  },
+  "options": {},
+  "attributes": {
+    "calculators": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::calculator.calculator"
+    },
+    "divider": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calculators",
+  "info": {
+    "singularName": "calculator",
+    "pluralName": "calculators",
+    "displayName": "Calculator",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "banner": {
+      "type": "component",
+      "component": "calculator.banner",
+      "repeatable": false
+    },
+    "information": {
+      "type": "component",
+      "component": "calculator.information",
+      "repeatable": false
+    },
+    "metadata": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.table",
+        "blocks.grid",
+        "blocks.ck-editor",
+        "blocks.banner",
+        "blocks.grid-ck-editor",
+        "blocks.chart",
+        "blocks.review"
+      ]
+    },
+    "resume": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "review": {
+      "type": "component",
+      "component": "blocks.review",
+      "repeatable": false
+    },
+    "calculators": {
+      "type": "component",
+      "component": "calculator.calculators",
+      "repeatable": false
+    },
+    "background": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "icon": {
+      "type": "component",
+      "component": "ui.icon",
+      "repeatable": false
+    }
+  }
+}

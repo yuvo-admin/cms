@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_ui_table_rows",
+  "info": {
+    "displayName": "TableRow"
+  },
+  "options": {},
+  "attributes": {
+    "row": {
+      "type": "text"
+    }
+  }
+}

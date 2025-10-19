@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  ####################
+  # POSTGRES Service
+  ####################
+  postgres:
+    image: postgres:17-alpine
+    container_name: postgres_local
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    volumes:
+      - cms_pg-data:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5432:5432"
+    restart: unless-stopped
+  
+  ####################
+  # STRAPI Service
+  ####################
+  strapi:
+    command: npm run develop
+    volumes:
+      - ./src:/app/src
+      - ./config:/app/config
+      - ./database:/app/database
+      - ./.env.local:/app/.env
+    depends_on:
+      - postgres
+
+####################
+# Volumes
+####################
+volumes:
+  cms_pg-data:
+    external: true 

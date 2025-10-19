@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_calculators_calculators",
+  "info": {
+    "displayName": "Calculators"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "background": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "divider": {
+      "type": "boolean",
+      "default": false
+    },
+    "calculators": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::calculator.calculator"
+    }
+  },
+  "config": {}
+}

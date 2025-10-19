@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_blocks_grids",
+  "info": {
+    "displayName": "Grid Cards",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.card"
+    },
+    "columns": {
+      "type": "integer",
+      "default": 1
+    },
+    "divider": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

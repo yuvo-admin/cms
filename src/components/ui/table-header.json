@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_ui_table_headers",
+  "info": {
+    "displayName": "TableHeader"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "text"
+    }
+  }
+}

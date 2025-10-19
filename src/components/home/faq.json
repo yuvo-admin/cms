@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_faqs",
+  "info": {
+    "displayName": "Faq",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.faq"
+    }
+  }
+}

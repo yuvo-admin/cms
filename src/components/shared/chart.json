@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_charts",
+  "info": {
+    "displayName": "Chart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "bar",
+        "bubble",
+        "doughnut",
+        "line",
+        "polarArea",
+        "radar,",
+        "scatter"
+      ],
+      "default": "bar"
+    },
+    "labels": {
+      "type": "json"
+    },
+    "datasets": {
+      "type": "json"
+    },
+    "options": {
+      "type": "json"
+    },
+    "disclaimer": {
+      "type": "text"
+    }
+  }
+}

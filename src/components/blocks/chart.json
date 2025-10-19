@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_charts",
+  "info": {
+    "displayName": "Chart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "chart": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.chart"
+    },
+    "divider": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

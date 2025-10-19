@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blog_category_most_vieweds",
+  "info": {
+    "displayName": "CategoryMostViewed"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    },
+    "background": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "divider": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

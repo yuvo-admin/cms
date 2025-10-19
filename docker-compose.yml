@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  ####################
+  # STRAPI Service
+  ####################
+  strapi:
+    build:
+      context: .
+    container_name: ${DOCKER_STRAPI_CONTAINER_NAME:-strapi-v5}
+    image: yuvo/cms:latest 
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./uploads:/app/public/uploads
+
+  ####################
+  # NODE Service
+  ####################
+  npm:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: npm
+    ports:
+      - "80:80"
+      - "81:81"
+      - "443:443"
+    volumes:
+      - /srv/npm-data:/data
+      - /srv/npm-letsencrypt:/etc/letsencrypt
+    restart: unless-stopped

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_ui_buttons",
+  "info": {
+    "displayName": "button",
+    "icon": "paint"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "text"
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_self",
+        "_blank"
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_calculators_banners",
+  "info": {
+    "displayName": "Banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imageMobile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tag": {
+      "type": "component",
+      "component": "ui.tag",
+      "repeatable": false
+    },
+    "link": {
+      "type": "component",
+      "component": "ui.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

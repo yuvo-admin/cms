@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_calculator_information",
+  "info": {
+    "displayName": "Information"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

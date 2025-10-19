@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.banner"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.faq"
+    },
+    "tools": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.tools"
+    },
+    "blog": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.blog"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_ui_tags",
+  "info": {
+    "displayName": "Tag",
+    "icon": "paint"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "fill": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "stroke": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "link": {
+      "type": "text"
+    },
+    "target": {
+      "type": "enumeration",
+      "default": "_self",
+      "enum": [
+        "_self",
+        "_blank"
+      ]
+    }
+  }
+}

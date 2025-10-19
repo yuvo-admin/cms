@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "calculators_homes",
+  "info": {
+    "singularName": "calculators-home",
+    "pluralName": "calculators-homes",
+    "displayName": "Calculators - Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banners": {
+      "type": "component",
+      "component": "calculators.banner",
+      "repeatable": true
+    },
+    "categories": {
+      "type": "component",
+      "component": "calculators.calculators",
+      "repeatable": true
+    }
+  }
+}

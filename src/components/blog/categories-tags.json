@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blog_categories_tags",
+  "info": {
+    "displayName": "CategoriesTags"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  },
+  "config": {}
+}

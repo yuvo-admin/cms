@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_ck_editors",
+  "info": {
+    "displayName": "CKEditor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "divider": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

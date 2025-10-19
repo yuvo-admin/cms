@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  ####################
+  # CLOUD SQL PROXY Service
+  ####################
+  cloud-sql-proxy:
+    image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:latest
+    container_name: cloud-sql-proxy-local
+    command:
+      - "--address=0.0.0.0"
+      - "--private-ip=false"
+      - "--structured-logs"
+      - "--port=5432"
+      - "${GCP_SQL_INSTANCE}"
+    volumes:
+      - ./gcloud-service-account.json:/config/gcloud-service-account.json:ro
+    environment:
+      - "GOOGLE_APPLICATION_CREDENTIALS=/config/gcloud-service-account.json"
+    restart: unless-stopped
+
+  ####################
+  # STRAPI Service
+  ####################
+  strapi:
+    depends_on:
+      - cloud-sql-proxy

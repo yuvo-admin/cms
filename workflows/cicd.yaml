@@ -1,0 +1,34 @@
+name: Build and Push to Artifact Registry
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      # 1) Faz checkout do código
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # 2) Configura gcloud com as credenciais
+      - name: Set up gcloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      # 3) Autenticar Docker no Artifact Registry
+      - name: Configure Docker to use gcloud auth
+        run: gcloud auth configure-docker southamerica-east1-docker.pkg.dev
+
+      # 4) Build da imagem Docker local
+      - name: Build the Docker image
+        run: |
+          docker build -t southamerica-east1-docker.pkg.dev/fluted-gantry-454801-n8/frontend-prod/yuvo-frontend:latest .
+
+      # 5) Push para o Artifact Registry
+      - name: Push image to Artifact Registry
+        run: |
+          docker push southamerica-east1-docker.pkg.dev/fluted-gantry-454801-n8/frontend-prod/yuvo-frontend:latest

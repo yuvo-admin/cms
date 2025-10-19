@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blocks_grid_ck_editors",
+  "info": {
+    "displayName": "Grid CKEditor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "columns": {
+      "type": "integer"
+    },
+    "divider": {
+      "type": "boolean"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.ck-editor"
+    }
+  }
+}
