@@ -618,7 +618,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
+    posts: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;
@@ -715,7 +715,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
         'blocks.review',
       ]
     >;
-    category: Schema.Attribute.Relation<'manyToMany', 'api::category.category'>;
+    category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     coverMobile: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'

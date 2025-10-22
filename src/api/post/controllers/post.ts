@@ -14,13 +14,10 @@ export default factories.createCoreController('api::post.post', ({ strapi }) => 
         return ctx.notFound('Post not found');
       }
 
-      // Extrai os IDs das categorias do post atual
-      const categoryIds = post.category.map((cat) => cat.id);
-
       // Busca posts relacionados que compartilham pelo menos uma categoria
       const related = await strapi.db.query('api::post.post').findMany({
         where: {
-          category: { $in: categoryIds },
+          category: { $in: post.category.id },
           slug: { $ne: post.slug },
         },
         // limit: 4, 
