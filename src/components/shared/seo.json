@@ -26,6 +26,9 @@
     },
     "metaKeywords": {
       "type": "text"
+    },
+    "metaCanonical": {
+      "type": "string"
     }
   }
 }

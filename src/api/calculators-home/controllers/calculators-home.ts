@@ -17,6 +17,7 @@ export default factories.createCoreController('api::calculators-home.calculators
           'categories',
           'categories.calculators',
           'categories.calculators.icon',
+          'metadata',
         ],
       });
 

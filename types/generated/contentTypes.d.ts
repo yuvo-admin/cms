@@ -495,6 +495,7 @@ export interface ApiBlogBlog extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
+    metadata: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -581,6 +582,7 @@ export interface ApiCalculatorsHomeCalculatorsHome
       'api::calculators-home.calculators-home'
     > &
       Schema.Attribute.Private;
+    metadata: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -617,6 +619,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       'api::category.category'
     > &
       Schema.Attribute.Private;
+    metadata: Schema.Attribute.Component<'shared.seo', false>;
     name: Schema.Attribute.String;
     posts: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
@@ -680,6 +683,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;
+    metadata: Schema.Attribute.Component<'shared.seo', false>;
     publishedAt: Schema.Attribute.DateTime;
     tools: Schema.Attribute.Component<'home.tools', false>;
     updatedAt: Schema.Attribute.DateTime;

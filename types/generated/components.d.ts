@@ -403,6 +403,7 @@ export interface SharedSeo extends Struct.ComponentSchema {
     name: 'Seo';
   };
   attributes: {
+    metaCanonical: Schema.Attribute.String;
     metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     metaKeywords: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.String & Schema.Attribute.Required;

@@ -20,7 +20,8 @@ export default factories.createCoreController('api::blog.blog', ({ strapi }) => 
           'categories.posts',
           'categories.posts.category',
           'categories.posts.cover',
-          'categories.posts.coverMobile'
+          'categories.posts.coverMobile',
+          'metadata'
         ],
       });
 

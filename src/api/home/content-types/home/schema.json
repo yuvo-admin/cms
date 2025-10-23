@@ -14,23 +14,28 @@
   "attributes": {
     "banner": {
       "type": "component",
-      "repeatable": false,
-      "component": "home.banner"
+      "component": "home.banner",
+      "repeatable": false
     },
     "faq": {
       "type": "component",
-      "repeatable": false,
-      "component": "home.faq"
+      "component": "home.faq",
+      "repeatable": false
     },
     "tools": {
       "type": "component",
-      "repeatable": false,
-      "component": "home.tools"
+      "component": "home.tools",
+      "repeatable": false
     },
     "blog": {
       "type": "component",
-      "repeatable": false,
-      "component": "home.blog"
+      "component": "home.blog",
+      "repeatable": false
+    },
+    "metadata": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }
