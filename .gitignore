@@ -137,4 +137,4 @@ node_modules/
 ############################
 # gcloud
 ############################
-gcloud-service-account.json
+gcloud*.json

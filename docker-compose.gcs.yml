@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   postgres:
     image: postgres:17-alpine
@@ -17,7 +15,11 @@ services:
   strapi:
     command: npm run start
     volumes:
-      - D:/projects/Yuvo/cms_keys/gcloud-cms-key.json:/app/config/gcloud-cms-key.json:ro
+      - ./src:/app/src
+      - ./config:/app/config
+      - ./database:/app/database
+      - ./uploads:/app/public/uploads
+      - ./gcloud-cms-key.json:/app/config/gcloud-cms-key.json:ro
     depends_on:
       - postgres
 
