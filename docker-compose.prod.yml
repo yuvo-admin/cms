@@ -4,4 +4,5 @@ services:
   strapi:
     command: npm run start
     volumes:
-      - /opt/apps/cms_keys/gcloud-key.json:/app/config/gcloud-key.json:ro
+      - /opt/apps/cms_keys/gcloud-cms-key.json:/app/config/gcloud-cms-key.json:ro
+      - ./uploads:/app/public/uploads

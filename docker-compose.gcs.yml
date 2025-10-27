@@ -17,7 +17,7 @@ services:
   strapi:
     command: npm run start
     volumes:
-      - D:/projects/Yuvo/cms_keys/gcloud-cms-key.json:/app/config/gcloud-key.json:ro
+      - D:/projects/Yuvo/cms_keys/gcloud-cms-key.json:/app/config/gcloud-cms-key.json:ro
     depends_on:
       - postgres
 
