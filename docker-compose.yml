@@ -13,11 +13,9 @@ services:
     env_file: .env
     ports:
       - "1337:1337"
-    volumes:
-      - ./uploads:/app/public/uploads
 
   ####################
-  # NODE Service
+  # NODE Service (NPM) - Sem mudanças
   ####################
   npm:
     image: jc21/nginx-proxy-manager:latest

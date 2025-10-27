@@ -12,17 +12,25 @@
     "start": "strapi start",
     "strapi": "strapi",
 
-    "### Docker DEV ###": "",
-    "docker:dev": "docker-compose --env-file .env -f docker-compose.yml -f docker-compose.local.yml up -d --build",
-    "docker:dev:no-cache": "docker-compose --env-file .env -f docker-compose.yml -f docker-compose.local.yml build --no-cache && docker-compose --env-file .env -f docker-compose.yml -f docker-compose.local.yml up -d",
-    "docker:dev:down": "docker-compose --env-file .env -f docker-compose.yml -f docker-compose.local.yml down",
+    "### Docker DEV (Local Upload) ###": "",
+    "docker:dev": "docker-compose --env-file .env.development -f docker-compose.yml -f docker-compose.dev.yml up -d --build",
+    "docker:dev:down": "docker-compose --env-file .env.development -f docker-compose.yml -f docker-compose.dev.yml down",
+    
+    "### Docker TEST (GCS Upload) ###": "",
+    "docker:gcs": "docker-compose --env-file .env.gcs -f docker-compose.yml -f docker-compose.gcs.yml up -d --build",
+    "docker:gcs:down": "docker-compose --env-file .env.gcs -f docker-compose.yml -f docker-compose.gcs.yml down",
 
     "### Docker DEV - DB Prod ###": "",
     "docker:remote-db": "docker-compose --env-file .env -f docker-compose.yml -f docker-compose.remote-db.yml up -d --build",
-    "docker:remote-db:down": "docker-compose --env-file .env -f docker-compose.yml -f docker-compose.remote-db.yml down"
+    "docker:remote-db:down": "docker-compose --env-file .env -f docker-compose.yml -f docker-compose.remote-db.yml down",
+
+    "### Docker PROD (VM Deploy) ###": "",
+    "docker:prod:up": "docker-compose --env-file .env.prod -f docker-compose.yml -f docker-compose.prod.yml up -d --build",
+    "docker:prod:down": "docker-compose --env-file .env.prod -f docker-compose.yml -f docker-compose.prod.yml down"
   },
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^6.0.2",
+    "@strapi-community/strapi-provider-upload-google-cloud-storage": "^5.0.5",
     "@strapi/plugin-cloud": "5.16.1",
     "@strapi/plugin-color-picker": "^5.16.1",
     "@strapi/plugin-users-permissions": "5.16.1",
