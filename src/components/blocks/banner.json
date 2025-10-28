@@ -7,32 +7,24 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "customField",
-      "options": {
-        "preset": "defaultHtml"
-      },
-      "customField": "plugin::ckeditor5.CKEditor"
+      "type": "string"
     },
     "description": {
-      "type": "customField",
-      "options": {
-        "preset": "defaultHtml"
-      },
-      "customField": "plugin::ckeditor5.CKEditor"
-    },
-    "button": {
-      "type": "component",
-      "repeatable": false,
-      "component": "ui.button"
-    },
-    "background": {
-      "type": "customField",
-      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
-      "customField": "plugin::color-picker.color"
+      "type": "text"
     },
     "divider": {
       "type": "boolean",
-      "default": true
+      "default": false
+    },
+    "background": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "cards": {
+      "type": "component",
+      "component": "blocks.text-image",
+      "repeatable": true
     }
   }
 }
