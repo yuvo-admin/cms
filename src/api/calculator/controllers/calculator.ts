@@ -41,6 +41,15 @@ export default factories.createCoreController('api::calculator.calculator',
           return ctx.notFound('Calculator not found');
         }
 
+        if (calculator?.calculators) {
+          calculator.calculators.calculators = calculator.calculators.calculators.reduce((acc, tool) => {
+            if (!acc.some((p) => p.slug === tool.slug)) {
+              acc.push(tool);
+            }
+            return acc;
+          }, [])
+        }
+
         return {
           calculator
         };
