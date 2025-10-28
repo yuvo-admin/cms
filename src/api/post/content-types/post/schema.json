@@ -55,7 +55,8 @@
         "blocks.ck-editor",
         "blocks.grid-ck-editor",
         "blocks.chart",
-        "blocks.review"
+        "blocks.review",
+        "blocks.grid-text-image"
       ]
     },
     "metadata": {

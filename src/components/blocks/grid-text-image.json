@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_grid_text_images",
+  "info": {
+    "displayName": "Grid Text Image"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "divider": {
+      "type": "boolean",
+      "default": false
+    },
+    "cards": {
+      "type": "component",
+      "component": "blocks.text-image",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

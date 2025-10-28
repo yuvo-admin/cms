@@ -102,6 +102,19 @@ export interface BlocksGridCkEditor extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksGridTextImage extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_grid_text_images';
+  info: {
+    displayName: 'Grid Text Image';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'blocks.text-image', true>;
+    description: Schema.Attribute.Text;
+    divider: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksReview extends Struct.ComponentSchema {
   collectionName: 'components_blocks_reviews';
   info: {
@@ -129,6 +142,27 @@ export interface BlocksTable extends Struct.ComponentSchema {
     divider: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     table: Schema.Attribute.Component<'shared.table', false>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksTextImage extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_text_images';
+  info: {
+    displayName: 'Text Image';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    imageMobile: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    length: Schema.Attribute.String & Schema.Attribute.DefaultTo<'100%'>;
   };
 }
 
@@ -608,8 +642,10 @@ declare module '@strapi/strapi' {
       'blocks.ck-editor': BlocksCkEditor;
       'blocks.grid': BlocksGrid;
       'blocks.grid-ck-editor': BlocksGridCkEditor;
+      'blocks.grid-text-image': BlocksGridTextImage;
       'blocks.review': BlocksReview;
       'blocks.table': BlocksTable;
+      'blocks.text-image': BlocksTextImage;
       'blog.categories-tags': BlogCategoriesTags;
       'blog.category': BlogCategory;
       'blog.category-most-viewed': BlogCategoryMostViewed;

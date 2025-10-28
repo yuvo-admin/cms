@@ -527,6 +527,7 @@ export interface ApiCalculatorCalculator extends Struct.CollectionTypeSchema {
         'blocks.grid-ck-editor',
         'blocks.chart',
         'blocks.review',
+        'blocks.grid-text-image',
       ]
     >;
     calculators: Schema.Attribute.Component<'calculator.calculators', false>;
@@ -717,6 +718,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
         'blocks.grid-ck-editor',
         'blocks.chart',
         'blocks.review',
+        'blocks.grid-text-image',
       ]
     >;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
