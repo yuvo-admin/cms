@@ -155,7 +155,7 @@ export default factories.createCoreController('api::category.category',
                             pageCount: Math.ceil(total / limitNumber),
                             total
                         },
-                        sortOrder: sort // Opcional: retorna qual ordenação foi usada
+                        sortOrder: sort 
                     }
                 };
             } catch (error) {

@@ -51,7 +51,7 @@ export default factories.createCoreController('api::calculator.calculator',
         }
 
         return {
-          calculator
+          data: calculator
         };
       } catch (error) {
         strapi.log.error('Error in findBySlug:',
